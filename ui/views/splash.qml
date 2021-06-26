@@ -24,23 +24,46 @@ Window {
         font.bold: true
         font.family: "Helvetica"
         font.pointSize: 24
-        color: "#fffde7"
+        color: "red"
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
+    }
+
+    Text {
+        text: "Initiliasing components ..."
+        font.bold: true
+        font.family: "Helvetica"
+        font.pointSize: 9
+        color: "red"
+        anchors.left: parent.left
+        anchors.bottom: control.top
+        anchors.leftMargin: 5
     }
 
     ProgressBar {
-        value: slider.value
-        style: ProgressBarStyle {
-            background: Rectangle {
+        id: control
+        value: 0.9
+        padding: 2
+        anchors.right: parent.right
+        anchors.left: parent.left
+        anchors.bottom: parent.bottom
+
+        background: Rectangle {
+            implicitWidth: 200
+            implicitHeight: 6
+            color: "#e6e6e6"
+            radius: 3
+        }
+
+        contentItem: Item {
+            implicitWidth: 200
+            implicitHeight: 4
+
+            Rectangle {
+                width: control.visualPosition * parent.width
+                height: parent.height
                 radius: 2
-                color: "lightgray"
-                border.color: "gray"
-                border.width: 1
-                implicitWidth: 200
-                implicitHeight: 24
-            }
-            progress: Rectangle {
-                color: "lightsteelblue"
-                border.color: "steelblue"
+                color: "#17a81a"
             }
         }
     }
