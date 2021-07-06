@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/img">
+        <file alias="landing_page_background.png">img/landing_page_background.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file alias="instagram.svg">icons/instagram.svg</file>
+        <file alias="google.svg">icons/google.svg</file>
+        <file alias="facebook.svg">icons/facebook.svg</file>
+        <file alias="dice.svg">icons/dice-d6.svg</file>
+        <file alias="arrow_right.svg">icons/arrow-alt-circle-right.svg</file>
+        <file alias="arrow_left.svg">icons/arrow-alt-circle-left.svg</file>
+    </qresource>
+</RCC>
